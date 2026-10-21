@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Academia Corpo em Movimento</title>
+</head>
+<body>
+
+    <h1>Academia Corpo em Movimento</h1>
+
+    <p>Bem-vindo ao sistema da academia!</p>
+
+    <a href="/turmas/">Ver Turmas</a>
+
+    <hr>
+
+    <h2>Modalidades Disponíveis</h2>
+
+    {% for modalidade in modalidades %}
+        <h3>{{ modalidade.nome }}</h3>
+        <p>{{ modalidade.descricao }}</p>
+        <hr>
+    {% empty %}
+        <p>Nenhuma modalidade cadastrada.</p>
+    {% endfor %}
+
+</body>
+</html>
